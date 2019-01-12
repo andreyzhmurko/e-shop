@@ -1,0 +1,7 @@
+RewriteEngine On
+AddDefaultCharset cp-1251
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [L]
+RewriteRule ^.*$ index.php [L]
