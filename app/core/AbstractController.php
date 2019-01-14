@@ -19,7 +19,7 @@ abstract class AbstractController implements defaulTable {
     }
 
     public function __call($name, $arguments) {
-//	Router::ErrorPage404();
+		Router::ErrorPage404();
     }
 
 }
