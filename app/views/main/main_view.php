@@ -26,27 +26,30 @@
                 </div>
             </div>
 
+
             <div class="col-sm-9 padding-right">
-                <h2 class="title text-center">Рекомендуемые товары</h2>
-                <div class="slider-autoplay">
-                    <?php foreach ($this->recommended_products as $product): ?>
-                        <div class="features_items">
-                            <a href="/product/<?= $product['id']; ?>">
-                                <div class="main-slider">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="<?= DIRECTORY_SEPARATOR . AdminProduct::$path . $product['id'] . $product['main_image']; ?>" alt="" />
-                                            <div class="main-slider-info">
-                                                <h2><?= $product['price']; ?> грн</h2>
-                                                <p><a href="/product/<?= $product['id']; ?>"><?= $product['name']; ?></a></p>
+                <div class="recommended_items">
+                    <h2 class="title text-center">Рекомендуемые товары</h2>
+                    <div class="slider-autoplay">
+                        <?php foreach ($this->recommended_products as $product): ?>
+                            <div class="features_items">
+                                <a href="/product/<?= $product['id']; ?>">
+                                    <div class="main-slider">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <img src="<?= DIRECTORY_SEPARATOR . AdminProduct::$path . $product['id'] . $product['main_image']; ?>" alt="" />
+                                                <div class="main-slider-info">
+                                                    <h2><?= $product['price']; ?> грн</h2>
+                                                    <p><a href="/product/<?= $product['id']; ?>"><?= $product['name']; ?></a></p>
+                                                </div>
+                                                <a href="/cart/add/<?= $product['id']; ?>" class="btn btn-default add-to-cart" data-id="<?= $product['id']; ?>><i class="fa fa-shopping-cart"></i>Добавить в корзину</a>
                                             </div>
-                                            <a href="/cart/add/<?= $product['id']; ?>" class="btn btn-default add-to-cart" data-id="<?= $product['id']; ?>><i class="fa fa-shopping-cart"></i>Добавить в корзину</a>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                    <?php endforeach; ?>
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
 
                 <div class="features_items"><!--features_items-->
